@@ -11,7 +11,7 @@ const port = 8000;
 // Use GitHub Codespace domain when running in Codespaces
 const codespaceName = process.env.CODESPACE_NAME;
 const baseUrl = codespaceName
-  ? `https://${codespaceName}-${port}.app.github.dev`
+  ? `https://${codespaceName}-8000.app.github.dev`
   : `http://localhost:${port}`;
 
 // Middleware
