@@ -4,7 +4,7 @@ import teamsRouter from './routes/teams';
 import activitiesRouter from './routes/activities';
 import leaderboardRouter from './routes/leaderboard';
 import workoutsRouter from './routes/workouts';
-import { connectDatabase } from './database';
+import { connectDatabase } from './config/database';
 
 const app = express();
 const port = 8000;
