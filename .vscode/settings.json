@@ -6,6 +6,7 @@
         "npm install": true,
         "npm run seed": true,
         "npm --prefix /Users/carlosfajardo/workspace/skills-build-applications-w-copilot-agent-mode/octofit-tracker/backend": true,
-        "git -C /Users/carlosfajardo/workspace/skills-build-applications-w-copilot-agent-mode": true
+        "git -C /Users/carlosfajardo/workspace/skills-build-applications-w-copilot-agent-mode": true,
+        "npm run build": true
     }
 }
