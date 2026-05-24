@@ -1,14 +1,13 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import usersRouter from './routes/users';
 import teamsRouter from './routes/teams';
 import activitiesRouter from './routes/activities';
 import leaderboardRouter from './routes/leaderboard';
 import workoutsRouter from './routes/workouts';
+import { connectDatabase } from './database';
 
 const app = express();
 const port = 8000;
-const mongoUri = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/octofit_db';
 
 const codespaceName = process.env.CODESPACE_NAME;
 const baseUrl = codespaceName
@@ -29,8 +28,7 @@ app.use('/api/workouts', workoutsRouter);
 
 const start = async () => {
   try {
-    await mongoose.connect(mongoUri);
-    console.log(`MongoDB connected at ${mongoUri}`);
+    await connectDatabase();
 
     app.listen(port, () => {
       console.log(`Backend listening on ${baseUrl}`);
